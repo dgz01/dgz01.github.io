@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>亿寻</title>
     <style>
+        /* 清除浮动 */
         .clearfix:before,
         .clearfix::after {
             content: "";
@@ -21,97 +22,121 @@
             *zoom: 1;
         }
 
+        /* 清除内外框边距，快捷键，m0 p0 */
         * {
             margin: 0;
             padding: 0;
         }
 
+        /* 版心 */
         .w {
             width: 1200px;
+            /* m0 设定页边空白，上下为0，左右自动，作用页面居中*/
             margin: 0 auto;
         }
 
         a {
+            /* td 去掉所有链接的下划线*/
             text-decoration: none;
-            
         }
 
-        .content p a {
-            text-indent: 2em;
-            line-height: 60px;
-        }
-
+        /* 未被访问的链接， */
         a:link {
-            color: rgb(119, 35, 35);
+            color: rgb(129, 34, 34);
         }
 
+        /* 已被访问的链接 */
         a:visited {
             color: #421c72;
         }
 
+        /* 鼠标指针位于其上的链接 */
         a:hover {
             color: brown
         }
 
+        /* 鼠标按下未弹起的链接 */
         a:active {
             color: darkblue
         }
 
         li {
+            /* lis 去掉小圆点*/
             list-style: none;
         }
-        h4{
+
+        h4 {
+            /* tac 文字水平居中*/
             text-align: center;
+            /* 指定行高 */
             line-height: 60px;
         }
 
         .box {
             background-color: rgb(188, 197, 185);
+            /* ffa 指定字体系列*/
+            font-family: 'Microsoft YaHei','Times New Roman', Times,Serif;
         }
 
         .header {
             height: 80px;
             background-color: rgb(47, 128, 182);
+            /* tac 文字水平居中*/
             text-align: center;
+            /* bb 指定下边框*/
             border-bottom: 10px solid #a1bb89;
+            /* p5 指定内边距*/
             padding: 20px 0px 0px 0px;
         }
 
         .nav {
-
+            /* fl 加入左浮动*/
             float: right;
+            /* pof 固定定位到右边*/
             position: fixed;
+            /* l50 左走整个浏览器的一半,使其定位在版心 */
             left: 50%;
-            margin-left: 470px;
+            /* 在左走板心的一半,使它贴边 */
+            margin-left: 460px;
+            /* 字符居中 */
             text-align: center;
+            /* bl 指定左边框*/
             border-left: 3px dotted rgb(61, 12, 102);
+            /* p5 指定内边距*/
             padding: 20px 0px 20px 0px;
+            /* 指定行高 */
             line-height: 50px;
             width: 100px;
         }
 
         .content {
-
+            /* flr 可以加入右浮动*/
             float: left;
             width: 1000px;
+            /* 指定行高 */
             line-height: 40px;
-            text-indent: 2em;
+            /* p5 指定内边距*/
             padding: 15px 0px 50px 50px;
+            /* ti2em 头行文本缩进两个字符，*/
+            text-indent: 2em;
         }
 
         .read {
-            color: rgb(226, 29, 72);
+            color: rgb(223, 35, 75);
+        }
+        .pop {
+            background-color: rgb(116, 12, 12);
         }
     </style>
 </head>
 
 <body>
-
+    <!-- .header建立头部盒子 -->
     <div class="header w">
         <h1>亿寻</h1>
         <h5> <a href="https://github.com/0-01/0/blob/master/1" target="_blank">View on GitHub</a></h5>
     </div>
-
+    <!--.clearfix+.nav+.content 添加浮动清除限位，快速导航，文字内容，3个盒子-->
     <div class="clearfix w box">
         <div class="nav w">
             <ul>
@@ -148,11 +173,12 @@
                 <p>!请未留下联系方式的捐款网友查看下文的 捐助者名单</p>
                 <h4 id="yxxz">亿寻下载</h4>
                 <p>当前版本: 0.1.0069 更新日期: 12/30/2019 提高了分享下载可用性及每天流量至 30G (b2 测试版为 100G)修复了分享显示不全错误,下载地址：
-                 <p><a href="https://www.lanzous.com/b00n7nu4d" target="_blank">https://www.lanzous.com/b00n7nu4d</a></p>
+                    <p><a href="https://www.lanzous.com/b00n7nu4d" target="_blank">https://www.lanzous.com/b00n7nu4d</a>
+                    </p>
                 </p>
                 <p>湖南地区请下载 亿寻 PRO 版，主页地址</p>
                 <p><a href="https://github.com/0-01/1/blob/master/1"
-                    target="_blank">https://github.com/0-01/1/blob/master/1</a></p>
+                        target="_blank">https://github.com/0-01/1/blob/master/1</a></p>
                 <h4 id="yssp">演示视频</h4>
                 <p><a href="https://www.lanzous.com/i7t2hdi" target="_blank">https://www.lanzous.com/i7t2hdi</a></p>
                 <h4 id="gxsx">更新事项</h4>
@@ -171,21 +197,26 @@
                 <P><a href="https://www.telerik.com/fiddler" target="_blank">https://www.telerik.com/fiddler</a></P>
                 <p>下载Fiddler v5.0.20194 - [截至到 2019/12/14 日时的最新版本]</p>
                 <p><a href="https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe"
-                    target="_blank">https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe</a><br>或<br><p><a
-                    href="https://www.lanzous.com/b00n82pze" target="_blank">https://www.lanzous.com/b00n82pze</a></p></p>
+                        target="_blank">https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe</a><br>或<br>
+                    <p><a href="https://www.lanzous.com/b00n82pze" target="_blank">https://www.lanzous.com/b00n82pze</a>
+                    </p>
+                </p>
                 <h4 id="jrqz">加入群组</h4>
                 <p>在手机商店中搜索 Signal
                     进行安装，或直接访问以下地址<br>IPhone<p><a
-                        href="https://apps.apple.com/cn/app/signal-private-messenger/id874139669"
-                        target="_blank">https://apps.apple.com/cn/app/signal-private-messenger/id874139669</a></p>Android<p><a
-                        href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=zh"
-                        target="_blank">https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=zh</a></p>另外，如果是安卓手机也可以直接从Signal
+                            href="https://apps.apple.com/cn/app/signal-private-messenger/id874139669"
+                            target="_blank">https://apps.apple.com/cn/app/signal-private-messenger/id874139669</a></p>
+                    Android<p><a href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=zh"
+                            target="_blank">https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=zh</a>
+                    </p>另外，如果是安卓手机也可以直接从Signal
                     官方网站下载 APK 文件进行安装<br>下载地址<p><a href="https://signal.org/android/apk/Signal 4.50.5"
-                        target="_blank">https://signal.org/android/apk/Signal 4.50.5</a></p> - [截至到 2019/12/14日时的最新版本]<p><a
-                        href="https://updates.signal.org/android/Signal-website-universal-release-4.50.5.apk"
-                        target="_blank">https://updates.signal.org/android/Signal-website-universal-release-4.50.5.apk</a></p>或<P><a
-                        href="https://www.lanzous.com/b00n7zy3i"
-                        target="_blank">https://www.lanzous.com/b00n7zy3i</a></P>SHA1:5A522F454772E4BB44AF3D4FEFB23AD775073CB7<br>注册
+                            target="_blank">https://signal.org/android/apk/Signal 4.50.5</a></p> - [截至到
+                    2019/12/14日时的最新版本]<p><a
+                            href="https://updates.signal.org/android/Signal-website-universal-release-4.50.5.apk"
+                            target="_blank">https://updates.signal.org/android/Signal-website-universal-release-4.50.5.apk</a>
+                    </p>或<P><a href="https://www.lanzous.com/b00n7zy3i"
+                            target="_blank">https://www.lanzous.com/b00n7zy3i</a></P>
+                    SHA1:5A522F454772E4BB44AF3D4FEFB23AD775073CB7<br>注册
                     Signal，之后请将你的 Signal
                     号码(即手机号，请使用自己的真实手机号)发邮件至<br>z400003@gmail.com<br>并注明你是哪里人 (原籍) 及附上转发 亿寻
                     软件的链接或截图。转发前请仔细阅读下文。<br>转发时应写明软件名、干什么用的以及主页地址，也就是此网页。<br>可以转发到论坛、微博、哔哩哔哩、贴吧、知乎、简书或其他网站，然后将转发地址和
@@ -194,11 +225,19 @@
                 </p>
                 <h4 id="jzmd">捐助名单</h4>
                 <p><a href="https://github.com/0-01/0/blob/master/contributors"
-                    target="_blank">https://github.com/0-01/0/blob/master/contributors</a></p>
+                        target="_blank">https://github.com/0-01/0/blob/master/contributors</a></p>
                 <p>如果您的名字丢失，请与我联系。请未留下联系方式的朋友留下您的邮件地址，以便将 亿寻 b1测试版 发送给您。</p>
                 <h4 id="lxzz">联系作者</h4>
                 <p>有问题，请发邮件至: z400002@gmail.com</p>
         </div>
+        <div class="pop">
+            <script>
+                var xlm_wid='15583';
+                var xlm_url='https://www.xianliao.me/';
+            </script>
+            <script type='text/javascript' charset='UTF-8' src='https://www.xianliao.me/embed.js'></script>
+        </div>
+        
     </div>
 </body>
 
