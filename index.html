@@ -75,7 +75,7 @@
         .box {
             background-color: rgb(188, 197, 185);
             /* ffa 指定字体系列*/
-            font-family: 'Microsoft YaHei','Times New Roman', Times,Serif;
+            font-family: 'Microsoft YaHei', 'Times New Roman', Times, Serif;
         }
 
         .header {
@@ -124,10 +124,22 @@
         .read {
             color: rgb(223, 35, 75);
         }
+
         .pop {
-            background-color: rgb(116, 12, 12);
+            background-color: rgb(71, 36, 230);
         }
     </style>
+    <script>
+        function dgz01(id1, id2) {
+            // 通过对象id获取元素
+            var id1 = document.getElementById(id1);
+            var id2 = document.getElementById(id2);
+            id1.onclick = function () {
+                id2.style.fontSize = "2em"
+                id2.style.backgroundColor="#666";
+                }
+        }
+    </script>
 </head>
 
 <body>
@@ -140,59 +152,86 @@
     <div class="clearfix w box">
         <div class="nav w">
             <ul>
-                <li><a href="#kfcz">开发初衷</a></li>
-                <li><a href="#zyts">重要提示</a></li>
-                <li><a href="#zxqk">最新情况</a></li>
-                <li><a href="#zysx">注意事项</a></li>
-                <li><a href="#yxxz">亿寻下载</a></li>
-                <li><a href="#yssp">演示视频</a></li>
-                <li><a href="#gxsx">更新事项</a></li>
-                <li><a href="#fzgj">辅助工具</a></li>
-                <li><a href="#jrqz">加入群组</a></li>
-                <li><a href="#jzmd">捐助名单</a></li>
-                <li><a href="#lxzz">联系作者</a></li>
+                <li><a id=a1 href="#original">开发初衷</a></li>
+                <li><a id=a2 href="#tips">重要提示</a></li>
+                <li><a id=a3 href="#new">最新情况</a></li>
+                <li><a id=a4 href="#careful">注意事项</a></li>
+                <li><a id=a5 href="#download">亿寻下载</a></li>
+                <li><a id=a6 href="#demonstration">演示视频</a></li>
+                <li><a id=a7 href="#update">更新事项</a></li>
+                <li><a id=a8 href="#tool">辅助工具</a></li>
+                <li><a id=a9 href="#group">加入群组</a></li>
+                <li><a id=a10 href="#donation">捐助名单</a></li>
+                <li><a id=a11 href="#author">联系作者</a></li>
             </ul>
         </div>
         <div class="content w">
-            <h4 id="kfcz">开发初衷</h4>
-            <p>本项目能不能继续下去，完全掌握你的手里。项目不需要捐助，也不要你付出什么，只需要帮忙转发。你可以转发到任何地方，比如论坛、博客、专栏文章、群、朋友圈，甚至告诉身边的人...<p>
-                    你可以不用写什么评测，复制即可。我只是在找一个人，这也是为什么软件名叫亿寻。</p>
-                <p>可能很多人没有寻过人的经历，无法体会找一个人有多难，要承受多大痛苦。这是没有办法的办法。若不是为了寻人，我根本没有精力也没有时间去写它，更没有兴趣去写它。这就是我编写这个软件的本意和初衷。请大家能献上爱心，帮忙寻找。
-                </p>
-                <h4 id="zyts">重要提示</h4>
+            <div id="original">
+                <h4>开发初衷</h4>
+                <p>本项目能不能继续下去，完全掌握你的手里。项目不需要捐助，也不要你付出什么，只需要帮忙转发。你可以转发到任何地方，比如论坛、博客、专栏文章、群、朋友圈，甚至告诉身边的人...<p>
+                        你可以不用写什么评测，复制即可。我只是在找一个人，这也是为什么软件名叫亿寻。</p>
+                    <p>可能很多人没有寻过人的经历，无法体会找一个人有多难，要承受多大痛苦。这是没有办法的办法。若不是为了寻人，我根本没有精力也没有时间去写它，更没有兴趣去写它。这就是我编写这个软件的本意和初衷。请大家能献上爱心，帮忙寻找。
+                    </p>
+            </div>
+            <script>
+                dgz01('a1', 'original')
+            </script>
+            <div id='tips'>
+                <h4>重要提示</h4>
                 <p class="read">重要提示:本页仅是作者网站的整理,请注意到作者网站查询更新，本次更新的共享下载，已经不再需要共享工具</p>
-                <h4 id="zxqk">最新情况</h4>
+            </div>
+            <script>
+                dgz01('a2', 'tips')
+            </script>
+            <div id="new">
+                <h4>最新情况</h4>
                 <p>亿寻 b2 测试版(支持不登录下载)已开始公开测试，可到 Signal 群组里索取下载地址。如何下载 Signal App 和加入Signal 群组请见下文说明。</p>
                 <p>请使用
                     Cookie登录，账号登录仍然处于失效状态。如何获取 Cookie，详见 README 文件。</p>
                 <p>如果使用短信或扫码登录，将只能使用 快捷下载 和 压缩后下载 (压缩后下载总文件大小不得超过50MB)。</p>
-                <h4 id="zysx">注意事项</h4>
+            </div>
+            <script>
+                dgz01('a3', 'new')
+            </script>
+            <div id="careful">
+                <h4>注意事项</h4>
                 <p>使用通过短信或扫码登录获取的Cookie(BDUSS)进行登录，可能会遇到 -6
                     错误。尚未测试。</p>
                 <p>快捷下载可能不支持断点续传，如果遇到无法下载，尝试删除下载目录里的未下完的文件，然后重试。</p>
                 <p>!请未留下联系方式的捐款网友查看下文的 捐助者名单</p>
-                <h4 id="yxxz">亿寻下载</h4>
+            </div>
+            <script>
+                dgz01('a4', 'careful')
+            </script>
+            <div id="download">
+                <h4>亿寻下载</h4>
                 <p>当前版本: 0.1.0069 更新日期: 12/30/2019 提高了分享下载可用性及每天流量至 30G (b2 测试版为 100G)修复了分享显示不全错误,下载地址：
                     <p><a href="https://www.lanzous.com/b00n7nu4d" target="_blank">https://www.lanzous.com/b00n7nu4d</a>
                     </p>
                 </p>
                 <p>湖南地区请下载 亿寻 PRO 版，主页地址</p>
                 <p><a href="https://github.com/0-01/1/blob/master/1"
-                        target="_blank">https://github.com/0-01/1/blob/master/1</a></p>
-                <h4 id="yssp">演示视频</h4>
-                <p><a href="https://www.lanzous.com/i7t2hdi" target="_blank">https://www.lanzous.com/i7t2hdi</a></p>
-                <h4 id="gxsx">更新事项</h4>
-                <p>更新到 v0.10069 时，除了可将 config 文件夹里的 SAM 和 Download.ini 复制到新版config
-                    文件里外，不要将其他配置文件也覆盖新版里的配置文件！因为重新调整了aria2和
-                    saldl配置文件。<br>!
-                    快捷下载备用参数<br>
-                    d1<br>
-                    BFdUbRlD<br>
-                    d2<br>
-                    fQ0aMUcXEg==<br>
-                    fQ0aMUcXEmZSQXBReRtGISBZUy1aIRZEEwwJSnZrL04XYl9+C3pqHlM8EyBKIX8WUGIwPUVKY2NVa<br>k4BWXYtDyUnaW0IKzs5Yh1gW04lCF5nV0VKBUN8cGR
+                    target="_blank">https://github.com/0-01/1/blob/master/1</a></p>
+                </div>
+                <script>
+                    dgz01('a5', 'download')
+                </script>
+                <div id="demonstration">
+                    <h4>演示视频</h4>
+                <p><a href="https://www.lanzous.com/i7t2hdi" target="_blank">https://www.lanzous.com/i7t2hdi</a></p></div>
+                <script>
+                    dgz01('a6', 'demonstration')
+                </script>
+                <div id="update">
+                <h4>更新事项</h4>
+                <p>更新到 v0.10069 时，除了可将 config 文件夹里的 SAM 和 Download.ini 复制到新版config文件里外，不要将其他配置文件也覆盖新版里的配置文件！因为重新调整了aria2和saldl配置文件。<br>!快捷下载备用参数<br>d1<br>BFdUbRlD<br>d2<br>fQ0aMUcXEg==<br>fQ0aMUcXEmZSQXBReRtGISBZUy1aIRZEEwwJSnZrL04XYl9+<br>C3pqHlM8EyBKIX8WUGIwPUVKY2NVa<br>k4BWXYtDyUnaW0IKzs5Yh1gW04lCF5nV0VKBUN8cGR
                     bWlBqUUVPCHt1BG4gLVFZOXxfUgJhBws=</p>
-                <h4 id="fzgj">辅助工具</h4>
+            </div>
+            <script>
+                dgz01('a7', 'update')
+            </script>
+            <div id="tool">
+                <h4>辅助工具</h4>
                 <p>Fiddler 主页</p>
                 <P><a href="https://www.telerik.com/fiddler" target="_blank">https://www.telerik.com/fiddler</a></P>
                 <p>下载Fiddler v5.0.20194 - [截至到 2019/12/14 日时的最新版本]</p>
@@ -201,7 +240,12 @@
                     <p><a href="https://www.lanzous.com/b00n82pze" target="_blank">https://www.lanzous.com/b00n82pze</a>
                     </p>
                 </p>
-                <h4 id="jrqz">加入群组</h4>
+            </div>
+            <script>
+                dgz01('a8', 'tool')
+            </script>
+            <div id="group">
+                <h4>加入群组</h4>
                 <p>在手机商店中搜索 Signal
                     进行安装，或直接访问以下地址<br>IPhone<p><a
                             href="https://apps.apple.com/cn/app/signal-private-messenger/id874139669"
@@ -223,21 +267,35 @@
                     Signal
                     号码一起发送至 z400003@gmail.com或转发至 QQ群、微信群、公众号、朋友圈、抖音、快手等<br>然后将转发截图和 Signal 号码一起发送至 z400003@gmail.com
                 </p>
-                <h4 id="jzmd">捐助名单</h4>
+            </div>
+            <script>
+                dgz01('a9', 'group')
+            </script>
+            <div id="donation">
+                <h4>捐助名单</h4>
                 <p><a href="https://github.com/0-01/0/blob/master/contributors"
                         target="_blank">https://github.com/0-01/0/blob/master/contributors</a></p>
                 <p>如果您的名字丢失，请与我联系。请未留下联系方式的朋友留下您的邮件地址，以便将 亿寻 b1测试版 发送给您。</p>
-                <h4 id="lxzz">联系作者</h4>
+            </div>
+            <script>
+                dgz01('a10', 'donation')
+            </script>
+            <div id="author">
+                <h4>联系作者</h4>
                 <p>有问题，请发邮件至: z400002@gmail.com</p>
+            </div>
+            <script>
+                dgz01('a11', 'author')
+            </script>
         </div>
         <div class="pop">
             <script>
-                var xlm_wid='15583';
-                var xlm_url='https://www.xianliao.me/';
+                var xlm_wid = '15583';
+                var xlm_url = 'https://www.xianliao.me/';
             </script>
             <script type='text/javascript' charset='UTF-8' src='https://www.xianliao.me/embed.js'></script>
         </div>
-        
+
     </div>
 </body>
 
