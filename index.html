@@ -126,7 +126,7 @@
         }
 
         .pop {
-            background-color: rgb(71, 36, 230);
+            background-color: rgb(31, 12, 116);
         }
     </style>
     <script>
@@ -136,8 +136,10 @@
             var id2 = document.getElementById(id2);
             id1.onclick = function () {
                 id2.style.fontSize = "2em"
-                id2.style.backgroundColor="#666";
-                }
+            }
+            id1.onmouseout = function () {
+                id2.style.fontSize = "1em"
+            }
         }
     </script>
 </head>
