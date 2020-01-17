@@ -64,7 +64,7 @@
             /* lis 去掉小圆点*/
             list-style: none;
             /* 鼠标变小手 */
-            cursor:pointer;
+            cursor: pointer;
         }
 
         h4 {
@@ -132,6 +132,14 @@
         .pop {
             background-color: rgb(162, 156, 211);
         }
+
+        .tobo {
+            position: absolute;
+            top: 0px;
+            /* 鼠标变? */
+            cursor: help;
+            background-color: rgb(143, 193, 197);
+        }
     </style>
     <script>
         function dgz01() {
@@ -159,6 +167,19 @@
                 }
             }
         }
+
+        function dgztobo(obj, target, callback) {
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.offsetTop == target - 10) {
+                    clearInterval(obj.timer);
+                    if (callback) {
+                        callback();
+                    }
+                }
+                obj.style.top = obj.offsetTop + 1 + 'px';
+            }, 30);
+        }
     </script>
 </head>
 
@@ -184,6 +205,11 @@
                 <li>捐助名单</li>
                 <li>联系作者</li>
             </ul>
+            <div class="tobo">
+                <!-- ▽△ -->
+                ▽
+            </div>
+
         </div>
         <div class="content w">
             <div>
@@ -289,6 +315,21 @@
 
             <script>
                 dgz01()
+                // var tobo = document.querySelector('.tobo');
+                dgztobo(document.querySelector('.tobo'), document.querySelector('ul').offsetHeight, function () {
+                    document.querySelector('.tobo').innerHTML = '△';
+                });
+                // console.log(document.querySelector('ul').offsetHeight);
+                document.querySelector('.tobo').addEventListener('click', fn);
+
+                function fn() {
+                    var divs = document.querySelector('.content').querySelectorAll('div');
+                    // console.log(lis);
+                    for (i = 0; i < divs.length; i++) {
+                        divs[i].style.display = 'block';
+                        divs[i].style.fontSize = "1em";
+                    }
+                }
             </script>
         </div>
         <div class="pop">
